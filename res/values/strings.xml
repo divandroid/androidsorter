@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, BubbleSort!</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="step">Step</string>
+    <string name="reset">Reset</string>
+    <string name="app_name">Sorter</string>
+    <string name="bubble_sort">Bubble Sort</string>
+    <string name="quick_sort">Quick Sort</string>
+    <string name="insertion_sort">Insertion Sort</string>
+    <string name="selection_sort">Selection Sort</string>
+    <string name="tree_sort">Tree Sort</string>
+    <string name="merge_sort">Merge Sort</string>
+</resources>

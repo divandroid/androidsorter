@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="1">
+	    <LinearLayout android:orientation="vertical"
+	       android:layout_width="fill_parent"
+	       android:layout_height="fill_parent"
+	       android:layout_weight="1">
+	       <Spinner android:id="@+id/leftSpinner"
+	           android:layout_width="fill_parent"
+	           android:layout_height="wrap_content"/>
+			<!--<ListView  
+			    android:layout_width="fill_parent" 
+			    android:layout_height="fill_parent" 
+			    android:id="@+id/leftList"
+			    android:layout_weight="1"
+			    />-->
+			<eu.danielwhite.sorter.components.SortView
+				 android:id="@+id/leftList"
+				 android:layout_width="fill_parent"
+				 android:layout_height="fill_parent"
+				 android:background="#FF000000"
+				 android:layout_weight="1"
+			/>
+	    </LinearLayout>
+	    <LinearLayout android:orientation="vertical"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:layout_weight="1">
+           <Spinner android:id="@+id/rightSpinner"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"/>
+			<!--<ListView  
+	            android:layout_width="fill_parent" 
+	            android:layout_height="fill_parent" 
+	            android:id="@+id/rightList"
+	            android:layout_weight="1"
+	            />
+          -->
+            <eu.danielwhite.sorter.components.SortView
+                 android:id="@+id/rightList"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:background="#FF000000"
+                 android:layout_weight="1"
+            />
+          </LinearLayout>
+    </LinearLayout>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+    <Button
+        android:id="@+id/startbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play"
+    />
+</LinearLayout>
+</LinearLayout>
