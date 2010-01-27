@@ -176,12 +176,16 @@ public class SortCompare extends Activity {
     	
     	// clear the list of available sorters and add one instance of each sub-class of Sorter.
     	// These are the available algorithms shown to users.
-    	mAllSorters.clear();
-    	mAllSorters.add(new BubbleSorter<Integer>(startState));
-    	mAllSorters.add(new InsertionSorter<Integer>(cloneArray(startState)));
-    	mAllSorters.add(new MergeSorter<Integer>(cloneArray(startState)));
-    	mAllSorters.add(new QuickSorter<Integer>(cloneArray(startState)));
-    	mAllSorters.add(new SelectionSorter<Integer>(cloneArray(startState)));
+    	List<Sorter<Integer>> allSorters = mAllSorters;
+    	// note how the reference is brought into a local variable, which is much quicker to access in the Dalvik VM.
+    	// I don't know how much time is saved here (compared to the time taken for the rest of the method)
+    	// but this method could be run fairly often.
+    	allSorters.clear();
+    	allSorters.add(new BubbleSorter<Integer>(startState));
+    	allSorters.add(new InsertionSorter<Integer>(cloneArray(startState)));
+    	allSorters.add(new MergeSorter<Integer>(cloneArray(startState)));
+    	allSorters.add(new QuickSorter<Integer>(cloneArray(startState)));
+    	allSorters.add(new SelectionSorter<Integer>(cloneArray(startState)));
     	    	
     	// figure out which sorters are displayed, using the selected items from the spinners.
         mLeftSort = mAllSorters.get(mLeftSpinner == null ? 0 : mLeftSpinner.getSelectedItemPosition());
