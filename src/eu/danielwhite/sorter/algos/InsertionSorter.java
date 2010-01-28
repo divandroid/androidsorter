@@ -2,6 +2,13 @@ package eu.danielwhite.sorter.algos;
 
 import eu.danielwhite.sorter.R;
 
+/**
+ * Implementation of insertion sort.
+ * http://en.wikipedia.org/wiki/Insertion_sort
+ * @author Dan
+ *
+ * @param <T> The type of data to be sorted.
+ */
 public class InsertionSorter<T extends Comparable<T>> extends Sorter<T> {
 	
 	public InsertionSorter(T[] data) {
@@ -15,6 +22,7 @@ public class InsertionSorter<T extends Comparable<T>> extends Sorter<T> {
 
 	@Override
 	public void run() {
+		// on each pass through the list, sweep through the previously sorted items making room for the new item, until you find the right position. 
 		for(int i = 1; i < getDataLength(); i++) {
 			T val = getDataVal(i);
 			int j = i - 1;
